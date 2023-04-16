@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Result, Starships } from '../interfaces/straships';
 
@@ -8,15 +9,16 @@ import { Result, Starships } from '../interfaces/straships';
 })
 export class ApiShipService {
 
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  public starShipsList: any [] =[]
+  public starShipsList: Result[] = []
 
-  getShips() {
-    this.http.get('https://swapi.dev/api/starships')
-        .subscribe((resp:any)=>{
-          console.log(resp.results)
-          this.starShipsList= resp.results
-        });
+  getShips(page: number): Observable<Starships> {
+    return this.http.get<Starships>(`https://starpi.herokuapp.com/starpi/starships/${page}`);
   }
+
+  getShipCard(id: number): Observable <Result>{
+    return this.http.get<Result>(`https://swapi.dev/api/starships/${id}/`);
+  }
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiShipService } from '../services/api-ship.service';
+import { Result, Starships } from '../interfaces/straships';
 
 @Component({
   selector: 'app-starships',
@@ -8,14 +9,32 @@ import { ApiShipService } from '../services/api-ship.service';
 })
 export class StarshipsComponent implements OnInit {
 
-  constructor(private apiShipService: ApiShipService){}
+  starShipsList: Result[] = [];
+  page: number = 1
 
-  get starShipsList(){
-    return this.apiShipService.starShipsList;
-  }
+  constructor(private apiShipService: ApiShipService) { }
 
   ngOnInit(): void {
-    this.apiShipService.getShips();
+    this.getShips()
+  }
+
+  getShips() {
+    if (this.page === 4) {
+      return;
+    }
+    this.apiShipService.getShips(this.page)
+      .subscribe(resp => {
+        this.starShipsList = resp.results
+      })
+  }
+  onScroll(): void {
+    if (this.page === 4) {
+      return;
+    }
+    this.apiShipService.getShips(++this.page)
+      .subscribe((response: Starships) => {
+        this.starShipsList.push(...response.results);
+      })
   }
 
 }

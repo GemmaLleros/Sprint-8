@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ruta por defecto
   { path: 'home', component: HomeComponent },
   { path: 'starships', component: StarshipsComponent },
-  { path: 'starships-card', component: StarshipCardComponent },  
+  {path:'starships/:id',component:StarshipCardComponent},  
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }, // Ruta para el registro
   { path: '**', redirectTo: '' } // Ruta para redireccionar en caso de ruta no encontrada
