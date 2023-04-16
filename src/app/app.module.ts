@@ -11,12 +11,14 @@ import { ComponentsModule } from './components/components.module';
 import { RegisterComponent } from './components/register/register.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent 
+    RegisterComponent,
+    
   ],
   imports: [
     BrowserModule,

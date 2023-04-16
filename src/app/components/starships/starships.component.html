@@ -1,0 +1,14 @@
+<h2>Starships</h2>
+
+<div class="row">
+    <div class="col-12">
+        <div class="col-8" *ngFor=" let item of starShipsList">
+            <div class=" card">
+                <div class="card-body">
+                    <p class="card-text"><strong>{{item.name}}</strong></p>
+                    <p class="card-text">{{item.model}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

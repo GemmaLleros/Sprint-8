@@ -7,20 +7,22 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
-import { StrashipsComponent } from './straships/straships.component';
 import { StarshipCardComponent } from './starship-card/starship-card.component';
 import { LoginComponent } from './login/login.component';
+import { StarshipsComponent } from './starships/starships.component';
+
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    StrashipsComponent,
     StarshipCardComponent,
     LoginComponent,
+    StarshipsComponent 
   ],
   exports: [
     HomeComponent,
+    StarshipsComponent
   ],
   imports: [
     NgbModule, 
