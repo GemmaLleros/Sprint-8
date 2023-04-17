@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { StarshipCardComponent } from './starship-card/starship-card.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { StarshipsComponent } from './starships/starships.component';
 import { IdPipe } from '../pipes/id.pipe';
 
@@ -20,11 +21,13 @@ import { IdPipe } from '../pipes/id.pipe';
     HomeComponent,
     StarshipCardComponent,
     LoginComponent,
+    RegisterComponent,
     StarshipsComponent,
     IdPipe
   ],
   exports: [
     HomeComponent,
+    StarshipsComponent
   ],
   imports: [
     NgbModule, 

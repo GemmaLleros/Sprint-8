@@ -6,7 +6,6 @@ export interface Starships {
 }
 
 export interface Result {
-
     model:                  string;
     name:                   string;
     MGLT:                   string;

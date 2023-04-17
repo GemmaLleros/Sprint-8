@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
-import { RegisterComponent } from './components/register/register.component';
-
 
 
 
@@ -17,9 +15,7 @@ import { RegisterComponent } from './components/register/register.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    RegisterComponent,
-    
+    FooterComponent  
   ],
   imports: [
     BrowserModule,
