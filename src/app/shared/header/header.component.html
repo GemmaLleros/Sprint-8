@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Header</title>
 </head>
+
 <body>
-    <div class="container">
-        <nav class="navbar navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../../../assets/img/star-wars-logo.png" alt="Star Wars Logo"></a>
-
-            <a class="navbar-brand" href="#">HOME</a>
-
-            <a class="navbar-brand" href="#">STARSHIPS</a>
-
-            <a class="navbar-brand" href="#">LOGIN</a>
-
-            <a class="navbar-brand" href="#">SING UP</a>
+  <header class="back-header">
+    <div class="container justify-content-center">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg p-2">
+          <div class="navbar-brand mx-auto">
+            <img class="p-2 " src='../../../assets/img/star-wars-logo.png' width='200px' />
           </div>
         </nav>
       </div>
+      <div class="container justify-content-end justify-content-md-end">
+        <div class="row col-md-4 text-center align-self-center ">
+          <a class='btn border-white text-white m-1'>Login</a>
+          <a class='btn text-white m-1'>Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container justify-content-center">
+    <div class="row justify-content-center ">
+      <div
+        class="col-12 col-md-6 ">
+        <a class='text-white m-1' [routerLink]="['']">
+          HOME
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 ">
+        <a class='text-white m-1' [routerLink]="['/starships']">
+          STARSHIPS
+        </a>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
-<router-outlet></router-outlet>
-

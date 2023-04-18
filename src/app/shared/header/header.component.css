@@ -7,21 +7,33 @@
     background-color: black;
 }
 
-.navbar-brand img {
-    max-height: 60px;
-    margin: 0 auto;
-}
+.btn {
+    color: #fff;
+    background-color: black;
+    /* Cambia el color de fondo a tu preferencia */
+    border: rgb(64, 63, 63);
+    /* Remueve el borde */
+    padding: 0.5rem 1rem;
+    /* Ajusta el espacio entre el contenido y el borde */
+    cursor: pointer;
+    /* Cambia el cursor a una mano cuando se pasa por encima */
+  }
 
-.navbar-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Agregar esta línea */
-}
+  .btn:hover {
+    background-color: rgb(64, 63, 63);
+    /* Cambia el color de fondo cuando se pasa por encima */
+  }
 
-.navbar-brand {
-    margin-top: 10px; /* Cambiar margen izquierdo y derecho a 0 */
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
