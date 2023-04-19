@@ -1,28 +1,9 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    flex-wrap: wrap;
     background-color: black;
 }
 
-.btn {
-    color: #fff;
-    background-color: black;
-    /* Cambia el color de fondo a tu preferencia */
-    border: rgb(64, 63, 63);
-    /* Remueve el borde */
-    padding: 0.5rem 1rem;
-    /* Ajusta el espacio entre el contenido y el borde */
-    cursor: pointer;
-    /* Cambia el cursor a una mano cuando se pasa por encima */
-  }
 
-  .btn:hover {
-    background-color: rgb(64, 63, 63);
-    /* Cambia el color de fondo cuando se pasa por encima */
-  }
+ 
 
 
 
