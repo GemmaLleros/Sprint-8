@@ -1,2 +1,22 @@
-<p>home works!</p>
-<app-starships></app-starships>
+<ngb-carousel >
+
+	<ng-template *ngFor="let serie of series" ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="center-image" src="{{serie.img}}" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>{{serie.name}}</h3>
+			<p>{{serie.desc}}</p>
+		</div>
+	</ng-template>
+	
+	
+</ngb-carousel>
+
+<div class="container">
+	<div class="row py-4">
+		<div class="col-12 d-flex justify-content-center">
+			<img class="childImg" src="../../../assets/img/home-img/badbach3.webp">
+		</div>
+    </div>
+</div>
