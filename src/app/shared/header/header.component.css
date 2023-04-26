@@ -142,7 +142,30 @@
 
 #logo2 {
     display: none;
+    width: 350px;
+    height: 40px;
 }
+
+@media (max-width: 992px) {
+    #navbarNav {
+        display: none;
+    }
+
+    #navbarToggle {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #logo {
+        display: none;
+    }
+
+    #logo2 {
+        display: inline-block;
+    }
+}
+
 
 @media screen and (min-width: 900px) {
     .sw-kids-container .sw-kids {

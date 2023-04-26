@@ -1,3 +1,3 @@
 export const environment = {
-    authUrl: "http://localhost:4000"
+    authUrl: "http://localhost:3000"
 }
