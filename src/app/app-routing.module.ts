@@ -12,8 +12,8 @@ import { AuthGuard } from './components/guards/auth.guard';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ruta por defecto
   { path: 'home', component: HomeComponent },
-  {path:'starships',component:StarshipsComponent,canActivate:[AuthGuard]},
-  {path:'starships/:id',component:StarshipCardComponent,canActivate:[AuthGuard]}, 
+  { path:'starships',component:StarshipsComponent,canActivate:[AuthGuard]},
+  { path:'starships/:id',component:StarshipCardComponent,canActivate:[AuthGuard]}, 
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }, // Ruta para el registro
   { path: '**', redirectTo: '' } // Ruta para redireccionar en caso de ruta no encontrada
