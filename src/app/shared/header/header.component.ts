@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { NgIfContext } from '@angular/common';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { UsersService } from 'src/app/components/services/users.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { UsersService } from 'src/app/components/services/users.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  LoggedIn!: TemplateRef<NgIfContext<boolean>> | null;
 
   constructor(public usersService: UsersService) { }
   ngOnInit(): void {

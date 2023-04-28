@@ -1,3 +1,4 @@
+/* Background Stars */
 .bg-stars {
     background-image: url(https://static-mh.content.disney.io/starwars/assets/navigation/navigation_stars-c6452e016c73.jpg);
     background-position: center;
@@ -7,6 +8,7 @@
     background-color: black;
 }
 
+/* Navigation */
 .nav-grid {
     border-bottom: 1px solid gray;
 }
@@ -22,6 +24,19 @@
     flex-wrap: wrap;
 }
 
+.nav-link {
+    list-style: none;
+    font-style: normal;
+    color: #B5B7B7;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* Social Links */
 #social-links {
     margin-top: 3px;
     list-style: none;
@@ -37,68 +52,43 @@
     height: 20px;
     width: 20px;
     display: block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 10px;
+    padding: 0;
 }
 
-.nav-link {
-    list-style: none;
-    font-style: normal;
-    color: #B5B7B7;
-}
-
-.nav-link:hover {
-    color: #fff;
-}
-
-.sw-kids-container a span {
-    height: 25px;
-    width: 25px;
-    display: block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.facebook-icon {
-    background-image: url(../../../assets/img/icon_facebook_hover.svg);
+/* Social Icons */
+.facebook-icon,
+.instagram-icon,
+.twitter-icon,
+.youtube-icon {
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.facebook-icon:hover {
+.facebook-icon {
     background-image: url(../../../assets/img/icon_facebook_hover.svg);
 }
 
 .instagram-icon {
     background-image: url(../../../assets/img/icon_instagram_hover.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.instagram-icon:hover {
-    background-image: url(../../../assets/img/icon_instagram_hover.svg);
 }
 
 .twitter-icon {
-    background-image: url(../../../assets/img/icon_twitter_hover.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.twitter-icon:hover {
     background-image: url(../../../assets/img/icon_twitter_hover.svg);
 }
 
 .youtube-icon {
     background-image: url(../../../assets/img/icon_youtube_hover.svg);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
+.facebook-icon:hover,
+.instagram-icon:hover,
+.twitter-icon:hover,
 .youtube-icon:hover {
-    background-image: url(../../../assets/img/icon_youtube_hover.svg);
+    background-image: url(../../../assets/img/icon_facebook_hover.svg);
 }
 
+/* SW Kids */
 .sw-kids-container .sw-kids {
     display: inline-block;
     position: relative;
@@ -134,6 +124,14 @@
     background: grey;
 }
 
+.sw-kids-container .sw-kids a span {
+    height: 25px;
+    width: 25px;
+    display: block;
+    margin: 0 5px;
+}
+
+/* Logo */
 #logo {
     display: inline-block;
     width: 203px;
@@ -146,17 +144,27 @@
     height: 40px;
 }
 
-@media (max-width: 992px) {
-    #navbarNav {
-        display: none;
+
+@media screen and (min-width: 992px) {
+    #navbar-primary {
+        display: block;
     }
 
-    #navbarToggle {
-        display: block;
+    #navbar-secondary {
+        display: none;
     }
 }
 
 @media screen and (max-width: 992px) {
+    #navbar-secondary {
+        display: block;
+        margin-top: 15px;
+    }
+
+    #navbar-primary {
+        display: none;
+    }
+
     #logo {
         display: none;
     }
@@ -164,10 +172,19 @@
     #logo2 {
         display: inline-block;
     }
+
+    .nav-link .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 0;
+    }
 }
 
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 300px) {
     .sw-kids-container .sw-kids {
         width: 43px;
         height: 15px;
@@ -181,28 +198,3 @@
         top: 6px;
     }
 }
-@media screen and (max-width: 992px) {
-    /* Ocultar elementos de login, sing up y social */
-    #nav-external-links .navbar-nav{
-      display: none;
-    }
-    
-    /* Ajustar el ancho de la barra de navegación */
-    .navbar-expand-lg .navbar-nav {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    /* Alinear los elementos de la barra de navegación en la hamburguesa */
-    .navbar-expand-lg .navbar-nav .nav-item {
-      display: block;
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    
-    /* Cambiar el color del icono de la hamburguesa */
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-  }
-  
